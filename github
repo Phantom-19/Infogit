@@ -1,0 +1,146 @@
+#!usr/bin/python2
+#coding=utf-8
+
+# Auteur: Faxel
+# Contact: t.me/Faxelh
+# Le credit pour ce code va a Mr Faxel
+# Si vous voulez prendre Le credit pour ce code Voyez Faster Axel.
+
+import os,sys,time,datetime,random,hashlib,re,threading,json,requests,argparse,math
+from datetime import datetime
+from tqdm import tqdm
+from time import sleep 
+from pathlib import Path
+from typing import Any, Dict, List
+
+
+
+# -Automatisation-#
+def Street(z):
+    for e in z + '\n':
+        sys.stdout.write(e)
+        sys.stdout.flush()
+        time.sleep(0.009)
+
+
+try:
+    from colorama import init as colorama_init
+    from colorama import Fore, Back, Style
+except ImportError:
+    class ColoramaShim:
+        def __getattribute__(self, key):
+            return ''
+
+    Fore = Back = Style = ColoramaShim()
+else:
+    colorama_init(autoreset=True)
+
+
+parser = argparse.ArgumentParser(
+    description='Provides information about a git repository hosted on '
+                'GitHub without cloning it.')
+parser.add_argument('GitHub_URL', type=str,
+                    help='A GitHub URL for a repo to analyze')
+args = parser.parse_args()
+
+
+def num_kilo-octet_a_taille_str(Taille_bytes: int) -> str:
+    Nom_taille = ("KiB", "MiB", "GiB", "TiB")
+    x = int(math.floor(math.log(Taille_bytes, 1024)))
+    return f"{Taille_bytes / (1024 ** x):.2f} {Nom_taille[x]}"
+
+
+def  obtenir_langages(language_url: str) -> List[str]:
+    langages = []
+    req = requests.get(language_url).json()
+    for i in req:
+        languages.append(i)
+    return langages
+
+
+def obtenir_license(lic: Dict[str, str]) -> str:
+    for k, v in lic.items():
+        if k == 'name':
+            return v
+
+def obtenir_modification(repo_info: Dict[str, Any]) -> None:
+
+    print(Fore.YELLOW + "\nValider les détails du référentiel")
+    print(Fore.YELLOW + "----------------------")
+
+    url = repo_info['commits_url'][:-6]
+    req = requests.get(url).json()
+
+    sha_list = []
+    for i in req:
+        for k, v in i.items():
+            if k == 'sha':
+                sha_list.append(v)
+    
+    modification = url+ "/" + sha_list[0]
+    
+    req = requests.get(modification).json()
+
+    for k, v in req.items():
+        if k == 'modification':
+            for k,v in v.items():
+                if k == 'message':
+                    print("Dernier message de validation : " + v)
+                if k == 'committer':
+                    for k,v in v.items():
+                        if k == 'date':
+                            Date_modification = v.split('T')
+                            print("Date et heure de la dernière modification : " + "On " + Date_modification[0] + " at " + Date_modification[1].replace("Z", " (UTC)"))
+
+def print_info(repo_info: Dict[str, Any]) -> None:
+    print(Fore.GREEN + "Informations de base sur le référentiel")
+    print(Fore.YELLOW + "--------------------------------------")
+    print(f"Nom du référentiel: {repo_info['name']}")
+    print(f"Branche par défaut: {repo_info['default_branch']}")
+    print(f"Taille du référentiel: {num_kilo-octet_a_taille_str(repo_info['size'])}")
+    print(f"Licence de référentiel: {obtenir_license(repo_info['license'])}")
+    print(f"Type de référentiel: Fourchette" if repo_info['fork'] else "Type de référentiel: source")
+    print(f"Description du référentiel: {repo_info['description']}")
+
+
+
+    print(Fore.YELLOW + "\nLangues utilisées dans le référentiel")
+    print(Fore.YELLOW + "--------------------------------")
+    print(*obtenir_langages(repo_info['languages_url']), sep=', ')
+
+    print(Fore.YELLOW + "\nStatistiques du référentiel")
+    print(Fore.YELLOW + "---------------------")
+    print(f"Fourchettes: {repo_info['forks']}")
+    print(f"Observateurs: {repo_info['watchers']}")
+    print(f"Questions ouvertes: {repo_info['open_issues']}")
+    print(f"Nombre total d'étoiles: {repo_info['stargazers_count']}")
+
+    print(Fore.YELLOW + "\nURL du référentiel")
+    print(Fore.YELLOW + "----------------------")
+    print("GIT:   " + Fore.BLUE + repo_info['git_url'])
+    print("SSH:   " + Fore.BLUE + repo_info['ssh_url'])
+    print("SVN:   " + Fore.BLUE + repo_info['svn_url'])
+    print("Cloner: " + Fore.BLUE + repo_info['clone_url'])
+
+def main(args: argparse.Namespace) -> None:
+    chemin = Path(args.GitHub_URL)
+    org = path.parts[-2]
+    nom_repo = chemin.stem
+    url = f'https://api.github.com/repos/{org}/{nom_repo}'
+    repo_info = requests.get(url).json()
+    
+    for i, v in repo_info.items():
+        if v == 'Not Found':
+            print(Fore.RED + "Erreur: référentiel introuvable.", file=sys.stderr)
+            exit(1)
+
+    print_info(repo_info)
+    obtenir_modification(repo_info)
+    exit(0)
+
+if __name__ == '__main__':
+    try:
+        main(args)
+    except KeyboardInterrupt:
+        print("Clavier interrompu")
+        quit()
