@@ -44,7 +44,7 @@ parser.add_argument('GitHub_URL', type=str,
 args = parser.parse_args()
 
 
-def num_kilo-octet_a_taille_str(Taille_bytes: int) -> str:
+def num_kilo_octet_a_taille_str(Taille_bytes: int) -> str:
     Nom_taille = ("KiB", "MiB", "GiB", "TiB")
     x = int(math.floor(math.log(Taille_bytes, 1024)))
     return f"{Taille_bytes / (1024 ** x):.2f} {Nom_taille[x]}"
@@ -97,7 +97,7 @@ def print_info(repo_info: Dict[str, Any]) -> None:
     print(Fore.YELLOW + "--------------------------------------")
     print(f"Nom du référentiel: {repo_info['name']}")
     print(f"Branche par défaut: {repo_info['default_branch']}")
-    print(f"Taille du référentiel: {num_kilo-octet_a_taille_str(repo_info['size'])}")
+    print(f"Taille du référentiel: {num_kilo_octet_a_taille_str(repo_info['size'])}")
     print(f"Licence de référentiel: {obtenir_license(repo_info['license'])}")
     print(f"Type de référentiel: Fourchette" if repo_info['fork'] else "Type de référentiel: source")
     print(f"Description du référentiel: {repo_info['description']}")
