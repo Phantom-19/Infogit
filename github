@@ -130,7 +130,7 @@ def print_info(repo_info: Dict[str, Any]) -> None:
 
 def main(args: argparse.Namespace) -> None:
     chemin = Path(args.GitHub_URL)
-    org = path.parts[-2]
+    org = chemin.parts[-2]
     nom_repo = chemin.stem
     url = f'https://api.github.com/repos/{org}/{nom_repo}'
     repo_info = requests.get(url).json()
