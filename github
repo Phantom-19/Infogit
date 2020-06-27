@@ -1,27 +1,33 @@
-#!usr/bin/python2
+#!/usr/bin/python3
 #coding=utf-8
 
-# Auteur: Faxel
-# Contact: t.me/Faxelh
-# Le credit pour ce code va a Mr Faxel
-# Si vous voulez prendre Le credit pour ce code Voyez Faster Axel.
-
-import os,sys,time,datetime,random,hashlib,re,threading,json,requests,argparse,math
-from datetime import datetime
-from tqdm import tqdm
-from time import sleep 
-from pathlib import Path
-from typing import Any, Dict, List
-
-
-
+import os,sys,time,datetime,random
 # -Automatisation-#
 def Street(z):
     for e in z + '\n':
         sys.stdout.write(e)
         sys.stdout.flush()
-        time.sleep(0.009)
-
+        time.sleep(0.09)
+        
+os.system('clear')
+try:
+	from requests import get, post
+	import json, os, subprocess as sp, sys
+except Exception as ff:
+	exit("\033[1;91m[\033[1;97mErreur provenance des Modules\033[1;91m]\033[1;93m %s"%(ff))
+if sys.version[0] in '2':
+   print("[38;5;214m●▬▬▬▬▬▬▬▬๑\033[1;97m●▬▬▬▬▬▬๑۩۩๑▬▬▬▬▬▬●●▬▬▬▬▬\033[1;32m▬▬▬▬๑۩۩๑▬▬▬▬▬▬●")  
+   exit("\033[1;91m[\033[1;97mDesole\033[1;91m] \033[1;97mVous ne pouvez pas utiliser\033[1;95m python2\033[1;97m.\nVeuillez lancer avec \033[1;96mpython3\n") 
+   
+os.system('clear')
+print("[38;5;214m●▬▬▬▬▬▬▬▬๑\033[1;97m●▬▬▬▬▬▬๑۩۩๑▬▬▬▬▬▬●●▬▬▬▬▬\033[1;32m▬▬▬▬๑۩۩๑▬▬▬▬▬▬●")             
+print("[38;5;214m•_  _ ____ \033[1;97m _  _ ____ ____ _  _\033[1;32m ____ ____   _  _• ")
+print("[38;5;214m•|\/| |__/ \033[1;97m |__| |__| |    |_/ \033[1;32m |___ |__/   |_/ • ")
+print("[38;5;214m•|  | |  \ \033[1;97m |  | |  | |___ | \_\033[1;32m |___ |  \ __| \_• ")   
+print("[38;5;214m●▬▬▬▬▬▬▬▬๑\033[1;97m●▬▬▬▬▬▬๑۩۩๑▬▬▬▬▬▬●●▬▬▬▬▬\033[1;32m▬▬▬▬๑۩۩๑▬▬▬▬▬▬●")
+Street("\033[1;97m╔═════════════════════════════════════════════╗")
+Street("\033[1;97m║\033[1;91m[\033[1;93m**\033[1;91m]\033[38;5;95m      Developpeur \033[1;97m:\033[38;5;214m  Faxel           \033[1;91m[\033[1;93m**\033[1;91m]\033[1;97m║")
+Street("\033[1;97m╚═════════════════════════════════════════════╝")
 
 try:
     from colorama import init as colorama_init
