@@ -18,7 +18,8 @@ logo_faxel =("""\033[38;5;247m╭━╮╭━╮╱╱\033[38;5;214m╭━━━
 ####################################################################################################
 # -Importation des modules-#
 try:
-    import os,time,sys,fileinput,base64,datetime,random,requests,mechanize
+    import os,time,sys,fileinput,base64,datetime,random,requests,mechanize,json
+    from requests import get, post 
     print("\033[1;92m Exigences disponibles")
     cls()
 except:
@@ -197,15 +198,15 @@ def infogit():
             print("\033[1;91m[\033[1;93m?\033[1;91m] \033[1;97mA plus man.")
             raw_input('\n\033[1;91m [\033[1;93m!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu...')
             Menu()
-   	re=get('https://api.github.com/users/'+Nom+'/repos')
-   	a=json.loads(re.text)
+   	requete = get('https://api.github.com/users/'+Nom+'/repos')
+   	req_json = json.loads(requete.text)
    except Exception as ef:
          print("\n\033[1;91m[\033[1;93m!\033[1;91m]\033[1;94m Erreur %s"%(ef))
          raw_input('\n\033[1;91m [\033[1;93m!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu...')
          Menu()
    items = []
    try:
-   	for item in a:
+   	for item in req_json:
    	    items.append(item['name'])
    except TypeError: 
        print("\033[1;91m[\033[1;93mx\033[1;91m]\033[1;97m Le nom d\'utilisateur\033[1;91m",Nom,"\033[1;97m n\'existe pas.")
