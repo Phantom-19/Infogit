@@ -230,9 +230,9 @@ def infogit():
    try:
    	Dmd=int(input("\n\033[1;91m[\033[1;93m*\033[1;91m] \033[1;97mClonage du lien git\033[1;91m (\033[1;95mnuméro\033[1;91m) :\033[1;96m "))       
    	if Dmd <= 0:
-   	        print("\033[1;91m[\033[1;93m?\033[1;91m] \033[1;97mA plus\n") 
-	        raw_input('\n\033[1;91m [\033[1;93m!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu...')
-                Menu()
+               print("\033[1;91m[\033[1;93m?\033[1;91m] \033[1;97mA plus\n") 
+               raw_input('\n\033[1;91m [\033[1;93m!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu...')
+               Menu()
    	os.system('git clone https://github.com/'+Nom+'/'+items[Dmd-1])
    	sp.call('mv '+str(items[Dmd-1])+' ..',shell=True,stdout=sp.DEVNULL, stderr=sp.STDOUT)
    	print("\n\033[1;91m[\033[1;93m@\033[1;91m]\033[1;92m Installation de \033[1;96m",items[Dmd-1],"\033[1;92mreussie\033[1;92m.")
