@@ -13,7 +13,7 @@
 <p align="center">
 <a href="#"><img title="Version" src="https://img.shields.io/badge/Version-7.0-green.svg?style=flat-square"></a>
 <a href="https://github.com/Phantom-19/followers"><img title="Abonnés" src="https://img.shields.io/github/followers/Phantom-19?color=blue&style=flat-square"></a>
-<a href="https://github.com/Phantom-19/Infogit/stargazers/"><img title="Étoiles" src="https://img.shields.io/github/stars/Phantom-19/Infogit??color=red&style=flat-square"></a>Infogit
+<a href="https://github.com/Phantom-19/Infogit/stargazers/"><img title="Étoiles" src="https://img.shields.io/github/stars/Phantom-19/Infogit??color=red&style=flat-square"></a>
 <a href="https://github.com/Phantom-19/Infogit/network/members"><img title="Fourches" src="https://img.shields.io/github/forks/Phantom-19/Infogit??color=red&style=flat-square"></a>
 <a href="https://github.com/Phantom-19/Infogit/watchers"><img title="En train de regarder" src="https://img.shields.io/github/watchers/Phantom-19/Infogit?label=Watchers&color=blue&style=flat-square"></a>
 <p align="right">
@@ -34,7 +34,7 @@
 ## ` NOM D'UTILISATEUR : Faxel    `
 ## ` MOT DE PASSE      : 08127934 `
 
-##  `Commande unique de cd insta_hack`:
+##  `Commande unique de cd Infogit`:
 ```
 apt update ; apt install git curl -y ; git clone https://github.com/Phantom-19/Infogit.git ; cd Infogit ; pip3 install mechanize ;   pip3 install requests ; python3 hub
 ```
