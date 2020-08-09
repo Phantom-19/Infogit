@@ -20,7 +20,7 @@ logo_faxel =("""\033[38;5;247m╭━╮╭━╮╱╱\033[38;5;214m╭━━━
 try:
     import os,time,sys,fileinput,base64,datetime,random,requests,mechanize,json
     from requests import get, post 
-    import subprocess as sp,
+    import subprocess as sp
     print("\033[1;92m Exigences disponibles")
     cls()
 except:
