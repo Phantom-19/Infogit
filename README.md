@@ -11,11 +11,11 @@
 <a href="#"><img title="Open Source" src="https://img.shields.io/badge/Open%20Source-%E2%9D%A4-green?"></a>
 </p>
 <p align="center">
-<a href="#"><img title="Version" src="https://img.shields.io/badge/Version-7.0-green.svg?style=flat-square"></a>
-<a href="https://github.com/Phantom-19/followers"><img title="Abonnés" src="https://img.shields.io/github/followers/Phantom-19?color=blue&style=flat-square"></a>
-<a href="https://github.com/Phantom-19/link/stargazers/"><img title="Étoiles" src="https://img.shields.io/github/stars/Phantom-19/Infogit??color=red&style=flat-square"></a>
-<a href="https://github.com/Phantom-19/link/network/members"><img title="Fourches" src="https://img.shields.io/github/forks/Phantom-19/Infogit??color=red&style=flat-square"></a>
-<a href="https://github.com/Phantom-19/link/watchers"><img title="En train de regarder" src="https://img.shields.io/github/watchers/Phantom-19/Infogit?label=Watchers&color=blue&style=flat-square"></a>
+<a href="#"><img title="Version" src="https://img.shields.io/badge/Version-7.0-green.svg?"></a>
+<a href="https://github.com/Phantom-19/followers"><img title="Abonnés" src="https://img.shields.io/github/followers/Phantom-19?color=blue"></a>
+<a href="https://github.com/Phantom-19/link/stargazers/"><img title="Étoiles" src="https://img.shields.io/github/stars/Phantom-19/Infogit??color=red"></a>
+<a href="https://github.com/Phantom-19/link/network/members"><img title="Fourches" src="https://img.shields.io/github/forks/Phantom-19/Infogit??color=red"></a>
+<a href="https://github.com/Phantom-19/link/watchers"><img title="En train de regarder" src="https://img.shields.io/github/watchers/Phantom-19/Infogit?label=Watchers&color=blue"></a>
 <p align="right">
 <a href="#"><img title="Langage" src="https://forthebadge.com/images/badges/made-with-python.svg"></a>
 </p>
@@ -26,8 +26,6 @@
 * `apt install git python2 python `
 * `git clone https://github.com/Phantom-19/Infogit.git`
 * `cd Infogit`
-* `pip3 install tqdm`
-* `pip3 install requests`
 
 ## ` Execution > ` `python3 hub.py`
 
@@ -36,9 +34,10 @@
 
 ##  `Commande unique de cd Infogit`:
 ```
-apt update ; apt install git curl -y ; git clone https://github.com/Phantom-19/Infogit.git ; cd Infogit ; pip3 install mechanize ;   pip3 install requests ; python3 hub.py
+apt update ; apt install git curl -y ; git clone https://github.com/Phantom-19/Infogit.git ; cd Infogit ; python3 hub.py
 ```
 ### `Si vous copiez ce code, alors donnez-moi les crédits` 
+
 ## `Retrouvez moi sur` :
 [![Github](https://img.shields.io/badge/Github-%40Phantom--19-cyan?logo=github)](https://github.com/Phantom-19)
 [![YouTube](https://img.shields.io/badge/Youtube-%40FasterAxel-red?logo=youtube)](https://www.youtube.com/c/FASTERAXEL)
@@ -52,4 +51,5 @@ apt update ; apt install git curl -y ; git clone https://github.com/Phantom-19/I
 [![Skyrock](https://img.shields.io/badge/Skyrock-%40Faxel-brown?logo=skyrock)](https://Faxel.skyrock.com/profil/)
 [![Snapchat](https://img.shields.io/badge/Snapchat-%40McTony64-yellow?logo=snapchat)](https://www.snapchat.com/add/mctony64)
 [![stackoverflow](https://img.shields.io/badge/stackoverflow-%40Faxel-yellow?logo=stackoverflow)](https://stackoverflow.com/users/13364230/faxel?)
+[![npm](https://img.shields.io/badge/npm-%40Faxel-yellow?logo=npm)](https://www.npmjs.com/~faxel)
 [![LICENSE](https://img.shields.io/badge/license-MIT-lightgrey.svg?logo=License-MIT)](https://raw.githubusercontent.com/phantom-19/yutube/master/LICENSE)
