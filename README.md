@@ -32,7 +32,7 @@
 ## ` NOM D'UTILISATEUR : Faxel    `
 ## ` MOT DE PASSE      : 08127934 `
 
-##  `Commande unique de cd Infogit`:
+##  `Commande unique`:
 ```
 apt update ; apt install git curl -y ; git clone https://github.com/Phantom-19/Infogit.git ; cd Infogit ; python3 hub.py
 ```
